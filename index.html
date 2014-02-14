@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>mancala</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/peer.js"></script>
+</head>
+<body>
+<div id="wrap" class="clearfix">
+<div id="left_wrap" class="clearfix">
+  <div id="enemy_field" class="action_field">
+    <div id="12" class="cup cup_5 clickable">3</div>
+    <div id="11" class="cup cup_4 clickable">3</div>
+    <div id="10" class="cup cup_3 clickable">3</div>
+    <div id="9" class="cup cup_2 clickable">3</div>
+    <div id="8" class="cup cup_1 clickable">3</div>
+    <div id="7" class="cup cup_0 clickable">3</div>
+  </div>
+  <div id="neutrality_field">
+    <div id="left_cup" class="cup neutral_cups">0</div>
+    <div id="right_cup" class="cup neutral_cups">0</div>
+  </div>
+  <div id="our_field" class="action_field">
+    <div id="0" class="cup cup_0 clickable">3</div>
+    <div id="1" class="cup cup_1 clickable">3</div>
+    <div id="2" class="cup cup_2 clickable">3</div>
+    <div id="3" class="cup cup_3 clickable">3</div>
+    <div id="4" class="cup cup_4 clickable">3</div>
+    <div id="5" class="cup cup_5 clickable">3</div>
+  </div>
+  <div id="status"></div>
+</div><!-- #left_wrap -->
+
+<div id="right_wrap">
+  <h4>my connect id</h4>
+  <span id="my_id"></span>
+  <h4>peer list</h4>
+  <select id="contactlist">
+  </select>
+  <button id='contact_start'>connect!</button>
+  <hr>
+
+  <!-- 送信するメッセージと送信ボタン -->
+  <input id='send_message' type="text" size="10">
+  <button id='send'>send!</button>
+  <!-- chat area -->
+  <ul id="chat_area"></ul>
+</div>
+
+
+</div><!-- #wrap -->
+
+
+<div id="remoteVideo"></div>
+
+<script src="js/connect.js"></script>
+<script src="js/mancala.js"></script>
+</body>
+</html>
